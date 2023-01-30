@@ -26,5 +26,22 @@ function timeBlockColor() {
 };
 
 // Save the event in local storage when the save button is clicked in that timeblock.
+// declare var for savebtn with jquery
+var saveBtn = $(".saveBtn");
+// save button click event listener
+$(".saveBtn").on("click", function () {
+    var savedInput = $(this).siblings("textarea").val()
+    var timeInput = $(this).parent().attr("value")
+    localStorage.setItem(timeInput, savedInput);
+  });
 
-
+// fetch if exists in local storage
+  $("#9").val(localStorage.getItem("9"));
+  $("#10").val(localStorage.getItem("10"));
+  $("#11").val(localStorage.getItem("11"));
+  $("#12").val(localStorage.getItem("12"));
+  $("#13").val(localStorage.getItem("13"));
+  $("#14").val(localStorage.getItem("14"));
+  $("#15").val(localStorage.getItem("15"));
+  $("#16").val(localStorage.getItem("16"));
+  $("#17").val(localStorage.getItem("17"));
