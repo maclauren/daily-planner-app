@@ -36,52 +36,74 @@
     </header>
 
 <!-- Current Day container -->
-    <div class="container current-day">
-      <h1 class="current-day"></h1>
-    </div>
+<div class="container current-day">
+  <h1 class="current-day"></h1>
+</div>
 <!-- Timeblocks -->
 <div class="timeblocks">
 <!-- Bootstrap table -->
-  <table class="table">
-    <!-- Header -->
-    <thead>
-    <!-- Rows -->
-      <tr>
-        <th scope="col">Time</th>
-        <th scope="col">Event</th>
-      </tr>
-    </thead>
-    <!-- Body -->
-    <tbody id="timeblock-rows">
-    <!-- Rows with 9-5 hour slots -->
-    <tr class="timeblock-row">
-      <td class="time">09:00</td>
+<table class="table">
+<!-- Header -->
+<thead>
+<!-- Rows -->
+<!-- Fixed to add some styling for spacing -->
+  <tr>
+    <th scope="col" style="width: 10%;">Time</th>
+    <th scope="col" style="width: 80%;">Event</th>
+    <!-- Added row for event button -->
+    <th scope="col" style="width: 10%;">Add Event</th>
+  </tr>
+</thead>
+<!-- Body -->
+<tbody id="timeblock-rows">
+<!-- Rows with 9-5 hour slots -->
+<!-- Fixed to add event buttons -->
+<tr class="timeblock-row">
+  <td class="time">09:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
 <!-- Use JS to enable user added events -->
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">10:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">11:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">12:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">13:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">14:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">15:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">16:00</td>
-      <td class="event"></td>
-    <tr class="timeblock-row">
-      <td class="time">17:00</td>
-      <td class="event"></td>
+<tr class="timeblock-row">
+  <td class="time">10:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">11:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">12:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">13:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">14:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">15:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">16:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
+<tr class="timeblock-row">
+  <td class="time">17:00</td>
+  <td><input type="text" class="form-control event" style="width: 100%"></td>
+  <td><button class="event-btn">Add</button></td>
+</tr>
     </tbody>
   </table>
 </div>
