@@ -35,84 +35,68 @@
 <!-- Display the current day at the top of the calendar when a user opens the planner -->
       <p id="currentDay" class="lead"></p>
     </header>
+<!-- Simple time-blocks with fewer children -->
+    <div class="container">
+      <!-- Add rows to the time-block, add an id to each row for navigating in js -->
+      <!-- adjust column spacing 1/10/1 -->
+      <div class="row time-block" id="9">
+        <!-- column 1 = time -->
+        <div class="col-1 hour pt-2">09:00</div>
+        <!-- col 2 = text area -->
+        <textarea class="col-10 event"></textarea>
+        <!-- col 3 = save button -->
+        <button class="col-1 saveBtn"></button>
+      </div>
 
-<!-- Current Day container -->
-<div class="container current-day">
-  <!-- Timeblocks -->
-    <div class="timeblocks">
-    <!-- Bootstrap table -->
-    <table class="table">
-    <!-- Header -->
-    <thead>
-    <!-- Rows -->
-    <!-- Fixed to add some styling for spacing -->
-      <tr>
-        <th scope="col" style="width: 10%;">Time</th>
-        <th scope="col" style="width: 80%;">Event</th>
-        <!-- Added row for event button -->
-        <th scope="col" style="width: 10%;">Add Event</th>
-      </tr>
-    </thead>
-    <!-- Body -->
-    <tbody id="timeblock-rows">
-<!-- Present timeblocks for standard business hours when the user scrolls down -->
-    <!-- Rows with 9-5 hour slots -->
-    <!-- Fixed to add event buttons -->
-    <tr class="timeblock-row">
-      <td class="time">09:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <!-- Use JS to enable user added events -->
-    <tr class="timeblock-row">
-      <td class="time">10:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">11:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">12:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">13:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">14:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">15:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">16:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-    <tr class="timeblock-row">
-      <td class="time">17:00</td>
-      <td><input type="text" class="form-control event" style="width: 100%"></td>
-      <td><button class="saveBtn">Add</button></td>
-    </tr>
-        </tbody>
-      </table>
-<!-- Adding classes for the colours of the boxes depending on past, present and future events -->
-      <p class="past"></p>
-      <p class="present"></p>
-      <p class="future"></p>
-  </div>
-</div>
+      <div class="row time-block" id="10">
+        <div class="col-1 hour pt-2">10:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
 
+      <div class="row time-block" id="11">
+        <div class="col-1 hour pt-2">11:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="12">
+        <div class="col-1 hour pt-2">12:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="13">
+        <div class="col-1 hour pt-2">13:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="14">
+        <div class="col-1 hour pt-2">14:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="15">
+        <div class="col-1 hour pt-2">15:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="16">
+        <div class="col-1 hour pt-2">16:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+
+      <div class="row time-block" id="17">
+        <div class="col-1 hour pt-2">17:00</div>
+        <textarea class="col-10 event"></textarea>
+        <button class="col-1 saveBtn"></button>
+      </div>
+    </div>
+    
 <!-- Scripts -->
 <!-- javascript file -->
     <script src="script.js"></script>

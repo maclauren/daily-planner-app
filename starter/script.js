@@ -6,25 +6,30 @@ var dateHeader = document.querySelector("#currentDay");
 var today = new Date();
 dateHeader.innerHTML = today.toDateString();
 
-// var dateHeader = document.querySelector("#currentDay");
-// var today = moment();
-// dateHeader.innerHTML = today.format('MMMM Do YYYY');
-
+// $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
 // why doesn't moment.js work???
 
-$(document).ready(function () {
-    var currentHour = moment().format("HH");
-    // Loop through each timeblock row
-    $(".timeblock-row").each(function () {
-      // Get the time for each timeblock
-      var timeblockHour = $(this).find(".time").text().split(":")[0];
-      // Set the background color based on past, present, future
-      if (timeblockHour < currentHour) {
-        $(this).addClass("past");
-      } else if (timeblockHour === currentHour) {
-        $(this).addClass("present");
-      } else {
-        $(this).addClass("future");
-      }
-    });
-  });
+// Color-code each timeblock based on past, present, and future when the timeblock is viewed.
+
+function timeBlockColor() {
+    var hour = moment().hours();
+
+    $(".time-block").each(function() {
+        var currentHour = parseInt($(this).attr("id"));
+
+        // console.log(this); //each time-block
+
+        if (currentHour > hour) {
+            $(this).addClass("future");
+        } else if (currentHour === hour) {
+            $(this).addClass("present");
+        } else {
+            $(this).addClass("past");
+        }
+    })
+};
+
+// EVENT SUBMIT
+
+var saveBtn = $(".saveBtn");
+
