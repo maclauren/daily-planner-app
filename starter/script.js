@@ -1,4 +1,3 @@
-// JUMBOTRON
 // Display the current day at the top of the calendar when a user opens the planner.
 // retrieve current date, add to header id currentDay
 
@@ -26,12 +25,14 @@ function timeBlockColor() {
 };
 
 // Save the event in local storage when the save button is clicked in that timeblock.
+// Persist events between refreshes of a page.
 // declare var for savebtn with jquery
 var saveBtn = $(".saveBtn");
 // save button click event listener
 $(".saveBtn").on("click", function () {
     var savedInput = $(this).siblings("textarea").val()
     var timeInput = $(this).parent().attr("value")
+// persist even after refresh
     localStorage.setItem(timeInput, savedInput);
   });
 
