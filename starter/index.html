@@ -32,84 +32,88 @@
     <header class="jumbotron">
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
+<!-- Display the current day at the top of the calendar when a user opens the planner -->
       <p id="currentDay" class="lead"></p>
     </header>
 
 <!-- Current Day container -->
 <div class="container current-day">
-  <h1 class="current-day"></h1>
-</div>
-<!-- Timeblocks -->
-<div class="timeblocks">
-<!-- Bootstrap table -->
-<table class="table">
-<!-- Header -->
-<thead>
-<!-- Rows -->
-<!-- Fixed to add some styling for spacing -->
-  <tr>
-    <th scope="col" style="width: 10%;">Time</th>
-    <th scope="col" style="width: 80%;">Event</th>
-    <!-- Added row for event button -->
-    <th scope="col" style="width: 10%;">Add Event</th>
-  </tr>
-</thead>
-<!-- Body -->
-<tbody id="timeblock-rows">
-<!-- Rows with 9-5 hour slots -->
-<!-- Fixed to add event buttons -->
-<tr class="timeblock-row">
-  <td class="time">09:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<!-- Use JS to enable user added events -->
-<tr class="timeblock-row">
-  <td class="time">10:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">11:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">12:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">13:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">14:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">15:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">16:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-<tr class="timeblock-row">
-  <td class="time">17:00</td>
-  <td><input type="text" class="form-control event" style="width: 100%"></td>
-  <td><button class="event-btn">Add</button></td>
-</tr>
-    </tbody>
-  </table>
+  <!-- Timeblocks -->
+    <div class="timeblocks">
+    <!-- Bootstrap table -->
+    <table class="table">
+    <!-- Header -->
+    <thead>
+    <!-- Rows -->
+    <!-- Fixed to add some styling for spacing -->
+      <tr>
+        <th scope="col" style="width: 10%;">Time</th>
+        <th scope="col" style="width: 80%;">Event</th>
+        <!-- Added row for event button -->
+        <th scope="col" style="width: 10%;">Add Event</th>
+      </tr>
+    </thead>
+    <!-- Body -->
+    <tbody id="timeblock-rows">
+    <!-- Rows with 9-5 hour slots -->
+    <!-- Fixed to add event buttons -->
+    <tr class="timeblock-row">
+      <td class="time">09:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <!-- Use JS to enable user added events -->
+    <tr class="timeblock-row">
+      <td class="time">10:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">11:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">12:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">13:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">14:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">15:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">16:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+    <tr class="timeblock-row">
+      <td class="time">17:00</td>
+      <td><input type="text" class="form-control event" style="width: 100%"></td>
+      <td><button class="event-btn">Add</button></td>
+    </tr>
+        </tbody>
+      </table>
+  </div>
 </div>
 
 <!-- Scripts -->
+<!-- javascript file -->
+    <script src="script.js"></script>
+<!-- jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<!-- moments.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script> 
   </body>
 </html>
