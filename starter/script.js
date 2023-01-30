@@ -10,26 +10,21 @@ dateHeader.innerHTML = today.toDateString();
 // why doesn't moment.js work???
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
-
+// define function, use momentjs to get current hour, iterate through time-block class (make string to integer), compare to the hour to id and add class of past/present/future
 function timeBlockColor() {
     var hour = moment().hours();
-
     $(".time-block").each(function() {
         var currentHour = parseInt($(this).attr("id"));
-
-        // console.log(this); //each time-block
-
-        if (currentHour > hour) {
-            $(this).addClass("future");
+        if (currentHour < hour) {
+            $(this).addClass("past");
         } else if (currentHour === hour) {
             $(this).addClass("present");
         } else {
-            $(this).addClass("past");
+            $(this).addClass("future");
         }
     })
 };
 
-// EVENT SUBMIT
+// Save the event in local storage when the save button is clicked in that timeblock.
 
-var saveBtn = $(".saveBtn");
 
