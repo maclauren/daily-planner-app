@@ -6,7 +6,7 @@
 // dateHeader.innerHTML = today.toDateString();
 
 $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
-console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
+// console.log(moment().format('MMMM Do YYYY, h:mm:ss a'));
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
 // define function, use momentjs to get current hour, iterate through time-block class (make string to integer), compare to the hour to id and add class of past/present/future
@@ -16,7 +16,7 @@ function timeBlockColor() {
     // should this be textarea instead of timeblock? neither work
     $(".event").each(function() {
         var currentHour = parseInt($(this).attr("id"));
-        console.log(currentHour)
+        // console.log(currentHour)
         if (currentHour < hour) {
             $(this).addClass("past");
         } else if (currentHour === hour) {
@@ -35,13 +35,13 @@ var saveBtn = $(".saveBtn");
 $(".saveBtn").on("click", function () {
     // persist even after refresh
     var savedInput = $(this).siblings("textarea").val()
-    console.log(savedInput);
+    // console.log(savedInput);
     var timeInput = $(this).siblings("textarea").attr("id")
-    console.log(timeInput);
+    // console.log(timeInput);
     localStorage.setItem(timeInput, savedInput);
   });
-var seventeen = localStorage.getItem("17");
-console.log(seventeen);
+// var seventeen = localStorage.getItem("17");
+// console.log(seventeen);
 // fetch if exists in local storage
   $("#9").text(localStorage.getItem("9"));
   $("#10").text(localStorage.getItem("10"));
