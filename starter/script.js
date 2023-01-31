@@ -6,12 +6,15 @@ var today = new Date();
 dateHeader.innerHTML = today.toDateString();
 
 // $("#currentDay").text(moment().format('dddd MMMM Do YYYY'));
+// $("#currentDay").html(moment().format('dddd MMMM Do YYYY'));
 // why doesn't moment.js work???
 
 // Color-code each timeblock based on past, present, and future when the timeblock is viewed.
 // define function, use momentjs to get current hour, iterate through time-block class (make string to integer), compare to the hour to id and add class of past/present/future
 function timeBlockColor() {
     var hour = moment().hours();
+    // this = current time block element
+    // should this be textarea instead of timeblock? neither work
     $(".time-block").each(function() {
         var currentHour = parseInt($(this).attr("id"));
         if (currentHour < hour) {
@@ -30,9 +33,9 @@ function timeBlockColor() {
 var saveBtn = $(".saveBtn");
 // save button click event listener
 $(".saveBtn").on("click", function () {
+    // persist even after refresh
     var savedInput = $(this).siblings("textarea").val()
     var timeInput = $(this).parent().attr("value")
-// persist even after refresh
     localStorage.setItem(timeInput, savedInput);
   });
 
